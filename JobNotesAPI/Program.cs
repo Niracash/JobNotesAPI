@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ToDoAPI.Data;
+using JobNotesAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,9 +10,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<TodoDbContext>(
+builder.Services.AddDbContext<JobsDbContext>(
     options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("DbConnection")));
+
+// chatgpt code to make api url lowercase
+builder.Services.Configure<RouteOptions>(options =>
+{
+    options.LowercaseUrls = true;
+    options.LowercaseQueryStrings = true;
+});
 
 var app = builder.Build();
 

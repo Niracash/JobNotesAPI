@@ -1,4 +1,4 @@
-namespace ToDoAPI
+namespace JobNotesAPI
 {
     public class WeatherForecast
     {
