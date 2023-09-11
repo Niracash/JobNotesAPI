@@ -1,6 +1,6 @@
 ## Job Notes API
 
-The Job Notes API is a robust .NET Core solution built on the ASP.NET Core framework, designed primarily for the management and retrieval of job information. This system integrates with a SQL Server database, offering a suite of features for adding, updating, and deleting job records.
+The Job Notes API is a .NET Core project made with ASP.NET Core. It's mainly for keeping the track of avilable jobs by working with a SQL Server database using CRUD functions.
 
 ### Table of Contents
 
@@ -11,7 +11,7 @@ The Job Notes API is a robust .NET Core solution built on the ASP.NET Core frame
 
 ### Dependencies
 
-- **EntityFrameworkCore**: This is a vital dependency, responsible for all database operations.
+- **EntityFrameworkCore**: This is a dependency that is responsible for all database operations.
 - **SQLServer**: Dependency used for database integration.
 - **Tools**: Required for migrations and update database.
 - **JobNotesAPI.Data**: Within this namespace, you'll find the `JobsDbContext`. This context ensures seamless integration with the database for all CRUD operations.
